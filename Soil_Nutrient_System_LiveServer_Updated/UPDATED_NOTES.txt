@@ -1,0 +1,2 @@
+Updated frontend: 10 Farmer dashboard features, 10 Admin dashboard features, matching non-repeated visuals, top language selector, small Home login cards, removed contact.jpg, and fixed Admin Login with a robust demo credential fallback. Frontend-only; backend/API can be connected later.
+Demo Admin: admin@soilnutri.demo / Admin@123

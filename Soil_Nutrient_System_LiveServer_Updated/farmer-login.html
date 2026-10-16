@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Farmer Login | SoilNutri AI</title><link rel="stylesheet" href="portal.css"></head><body>
+<header class="portal-nav"><a class="brand" href="index.html"><div class="brand-mark">🌱</div><span>SoilNutri AI</span></a><nav class="top-nav-links"><a class="nav-btn" href="index.html" data-en="Home" data-te="హోమ్" data-hi="होम" data-ta="முகப்பு">Home</a><a class="nav-btn" href="features.html" data-en="Features" data-te="ఫీచర్లు" data-hi="फीचर्स" data-ta="அம்சங்கள்">Features</a><a class="nav-btn" href="contact.html" data-en="Contact" data-te="సంప్రదించండి" data-hi="संपर्क" data-ta="தொடர்பு">Contact</a><a class="nav-btn" href="about.html" data-en="About" data-te="గురించి" data-hi="के बारे में" data-ta="பற்றி">About</a><select id="languageSelect" class="lang-select"><option value="en">🌐 English</option><option value="te">🌐 తెలుగు</option><option value="hi">🌐 हिन्दी</option><option value="ta">🌐 தமிழ்</option></select></nav></header>
+<main class="portal-wrap"><div class="auth-grid">
+<section class="panel hero-panel"><div class="eyebrow" data-en="Farmer Portal" data-te="రైతు పోర్టల్">Farmer Portal</div><h1 data-en="Welcome, Farmer 👨‍🌾" data-te="స్వాగతం, రైతు 👨‍🌾">Welcome, Farmer 👨‍🌾</h1><p data-en="Continue with the contact detail already registered in SoilNutri AI. Your verified account opens your personal farm dashboard." data-te="SoilNutri AIలో ఇప్పటికే నమోదు చేసిన వివరాలతో కొనసాగండి. ధృవీకరణ తర్వాత మీ వ్యక్తిగత వ్యవసాయ డాష్‌బోర్డ్ తెరుచుకుంటుంది.">Continue with the contact detail already registered in SoilNutri AI. Your verified account opens your personal farm dashboard.</p>
+<div class="feature-list"><div>📱 <b data-en="Phone + OTP" data-te="ఫోన్ + OTP">Phone + OTP</b><br><span class="muted" style="color:#cbded0" data-en="Verify a registered mobile number." data-te="నమోదైన మొబైల్ నంబర్‌ను ధృవీకరించండి.">Verify a registered mobile number.</span></div><div>🪪 <b data-en="Aadhaar + OTP" data-te="ఆధార్ + OTP">Aadhaar + OTP</b><br><span style="color:#cbded0" data-en="Use the registered Aadhaar number." data-te="నమోదైన ఆధార్ నంబర్‌ను ఉపయోగించండి.">Use the registered Aadhaar number.</span></div><div>📧 <b data-en="Email + OTP" data-te="ఈమెయిల్ + OTP">Email + OTP</b><br><span style="color:#cbded0" data-en="Verify the registered email address." data-te="నమోదైన ఈమెయిల్ చిరునామాను ధృవీకరించండి.">Verify the registered email address.</span></div></div></section>
+<section class="panel auth-panel"><h2 data-en="Farmer Login" data-te="రైతు లాగిన్">Farmer Login</h2><p class="sub" data-en="Choose how you want to verify your farmer account." data-te="మీ రైతు ఖాతాను ఎలా ధృవీకరించాలో ఎంచుకోండి.">Choose how you want to verify your farmer account.</p>
+<div class="method-tabs"><button class="method-tab active" data-method="phone" onclick="selectMethod('phone')">📱 <span data-en="Phone" data-te="ఫోన్">Phone</span></button><button class="method-tab" data-method="aadhaar" onclick="selectMethod('aadhaar')">🪪 <span data-en="Aadhaar" data-te="ఆధార్">Aadhaar</span></button><button class="method-tab" data-method="email" onclick="selectMethod('email')">📧 <span data-en="Email" data-te="ఈమెయిల్">Email</span></button></div>
+<div id="error" class="error"></div>
+<div class="form-grid"><div class="field"><label id="identifierLabel" for="identifier">Registered Phone Number</label><input id="identifier" placeholder="Enter 10-digit phone number" autocomplete="off"></div><button class="primary" id="sendBtn" onclick="sendOtp()" data-en="Send OTP" data-te="OTP పంపండి">Send OTP</button></div>
+<div class="otp-box" id="otpBox"><b data-en="Demo OTP sent successfully" data-te="డెమో OTP విజయవంతంగా పంపబడింది">Demo OTP sent successfully</b><div class="otp-code" id="otpCode"></div><small data-en="For this Live Server demo, the OTP is displayed here because no SMS/email gateway is connected." data-te="ఈ Live Server డెమోలో SMS/email gateway లేదు కాబట్టి OTP ఇక్కడ చూపబడుతుంది.">For this Live Server demo, the OTP is displayed here because no SMS/email gateway is connected.</small><div class="field" style="margin-top:12px"><label for="otp" data-en="Enter OTP" data-te="OTP నమోదు చేయండి">Enter OTP</label><input id="otp" maxlength="6" placeholder="6-digit OTP"></div><button class="primary" style="margin-top:10px" onclick="verifyOtp()" data-en="Verify & Continue" data-te="ధృవీకరించి కొనసాగండి">Verify & Continue</button></div>
+<div class="demo-note"><b data-en="Demo farmer data available" data-te="డెమో రైతు డేటా అందుబాటులో ఉంది">Demo farmer data available</b><br><span data-en="Phone: 9876543210 • Aadhaar: 123456789012 • Email: ramesh@soilnutri.demo" data-te="ఫోన్: 9876543210 • ఆధార్: 123456789012 • ఈమెయిల్: ramesh@soilnutri.demo">Phone: 9876543210 • Aadhaar: 123456789012 • Email: ramesh@soilnutri.demo</span></div>
+</section></div></main><footer class="footer">SoilNutri AI — Smart Agriculture Development System</footer>
+<div class="toast" id="toast"></div>
+<script src="data.js"></script><script src="language.js"></script><script>
+let method='phone',otp='',matchedFarmer=null;
+const labels={phone:['Registered Phone Number','Enter 10-digit phone number'],aadhaar:['Registered Aadhaar Number','Enter 12-digit Aadhaar number'],email:['Registered Email Address','Enter registered email address']};
+function refreshLoginLabels(){
+  const l=labels[method];
+  document.getElementById('identifierLabel').textContent=l[0];
+  document.getElementById('identifier').placeholder=l[1];
+}
+function selectMethod(m){method=m;document.querySelectorAll('.method-tab').forEach(b=>b.classList.toggle('active',b.dataset.method===m));document.getElementById('otpBox').classList.remove('show');document.getElementById('identifier').value='';hideError();refreshLoginLabels();}
+function showError(msg){const e=document.getElementById('error');e.textContent=msg;e.classList.add('show')}
+function hideError(){document.getElementById('error').classList.remove('show')}
+function sendOtp(){
+  hideError();const val=document.getElementById('identifier').value.trim();
+  matchedFarmer=findFarmer(method,val);
+  if(!matchedFarmer){showError('No existing farmer record was found for this detail.');return;}
+  otp=String(Math.floor(100000+Math.random()*900000));
+  document.getElementById('otpCode').textContent=otp;document.getElementById('otpBox').classList.add('show');
+}
+function verifyOtp(){
+  if(document.getElementById('otp').value.trim()!==otp){showError('Incorrect OTP.');return;}
+  saveCurrentFarmer(matchedFarmer);location.href='farmer-dashboard.html';
+}
+refreshLoginLabels();
+document.getElementById('languageSelect')?.addEventListener('change',e=>{setLanguage(e.target.value);refreshLoginLabels()});
+</script></body></html>
